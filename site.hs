@@ -2,11 +2,19 @@
 {-# LANGUAGE OverloadedStrings #-}
 import Data.Monoid
 import Hakyll
-
+import qualified System.IO.Strict as S
 
 --------------------------------------------------------------------------------
 main :: IO ()
-main = hakyll $ do
+main = do
+    deploy <- S.readFile "deploy"
+    let config = defaultConfiguration {
+        deployCommand = deploy
+    }
+    hakyllWith config runHakyll
+
+
+runHakyll = do
     match "images/*" $ do
         route   idRoute
         compile copyFileCompiler
@@ -64,4 +72,5 @@ main = hakyll $ do
 postCtx :: Context String
 postCtx =
     dateField "date" "%B %e, %Y" <> defaultContext
+
 
