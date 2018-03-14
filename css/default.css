@@ -1,35 +1,72 @@
+html {
+    font-family: sans-serif; /* 1 */
+}
+
 body {
     color: black;
     font-size: 16px;
     margin: 0px auto 0px auto;
-    width: 600px;
+    width: 700px;
+
+    background: #3f3f3f;
+    color: #e0dfe0;
 }
 
-div#header {
-    border-bottom: 2px solid black;
-    margin-bottom: 30px;
-    padding: 12px 0px 12px 0px;
+header#title {
+    margin-left: 110px;
+    font-size: 24px;
+    font-style: bold;
+    text-align: left;
+    padding: 20px 0px 30px 0px;
+    /* font-family: monospace; */
 }
 
-div#logo a {
-    color: black;
+
+a {
+    color: #f0efd0;
+}
+
+a:link{
+    text-decoration: none;
+}
+a:hover, a:active {
+    text-decoration: underline;
+}
+
+a.sourceLine:hover, a.sourceLine:hover {
+    text-decoration: none;
+    background: #3f3f3f;
+}
+
+nav{
+    width: 100px;
     float: left;
-    font-size: 18px;
-    font-weight: bold;
-    text-decoration: none;
-}
-
-div#header #navigation {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    margin-right: 20px;
     text-align: right;
+    font-style: bold;
+    text-transform: uppercase;
+    font-family: monospace;
 }
 
-div#header #navigation a {
-    color: black;
-    font-size: 18px;
-    font-weight: bold;
-    margin-left: 12px;
-    text-decoration: none;
-    text-transform: uppercase;
+nav a{
+    color: #f0efd0;
+}
+
+h1#post-title {
+    margin-top: 0; padding-top: 0;
+}
+
+section#main{
+    margin: 0;
+    padding: 0;
+    display: block;
+    float: left;
+    width: 578px;
+    line-height: 1.5;
+    text-align: justify;
 }
 
 div#footer {
@@ -49,8 +86,42 @@ h2 {
     font-size: 20px;
 }
 
-div.info {
-    color: #555;
-    font-size: 14px;
-    font-style: italic;
+
+
+/* Source code (use zenburn like color scheme) */
+
+pre, code {
+    font-family: monospace, monospace;
+    _font-family: 'courier new', monospace;
 }
+
+a.sourceLine::before {
+  content: attr(data-line-number) ". ";
+  display: inline-block;
+  color: grey;
+}
+code, pre { 
+    color: #f0efd0;
+    border-radius: 3px;
+    background: #2f2f2f;
+    text-align: left;
+}
+pre {
+    padding: 2px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    line-height: 1.8;
+    border: solid 1px grey;
+}
+
+/* macro */
+.pp{ color: #dfaf8f; }
+/* keyword */
+.kw{ color: #f0dfaf; }
+/* string */
+.st{ color: #cc9393; }
+/* comment */
+.co{ color: #7f9f7f; }
+/* numbers */
+.dv{ color: #8cd0d3; }
+
