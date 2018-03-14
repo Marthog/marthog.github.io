@@ -13,7 +13,7 @@ body {
 }
 
 header#title {
-    margin-left: 110px;
+    margin-left: 70px;
     font-size: 24px;
     font-style: bold;
     text-align: left;
@@ -45,11 +45,21 @@ nav{
     margin: 0;
     padding: 0;
     margin-right: 20px;
-    text-align: right;
     font-style: bold;
     text-transform: uppercase;
     font-family: monospace;
 }
+
+nav div#marthog_m {
+    margin-top: 10px;
+    text-align: center;
+}
+
+nav div#main{
+    margin-top: 30px;
+    text-align: right;
+}
+
 
 nav a{
     color: #f0efd0;
