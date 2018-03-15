@@ -70,7 +70,8 @@ runHakyll = do
 
 --------------------------------------------------------------------------------
 postCtx :: Context String
-postCtx =
-    dateField "date" "%B %e, %Y" <> defaultContext
+postCtx = 
+    dateField "date" "%B %e, %Y"
+    <> defaultContext
 
 

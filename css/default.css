@@ -14,7 +14,7 @@ body {
 
 header#title #text{
     font-size: 1.4rem;
-    font-style: bold;
+    font-weight: bold;
     text-align: left;
     /* font-family: monospace; */
 }
@@ -23,9 +23,10 @@ img#marthog_m {
     width: 5rem;
     vertical-align: middle;
     margin:0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2em;
     padding:0;
-    margin-left: 2rem;
-    margin-right: 2rem;
 }
 
 
@@ -48,16 +49,17 @@ a.sourceLine:hover, a.sourceLine:hover {
 }
 
 nav{
-    width: 8rem;
+    max-width: 8rem;
     float: left;
     display: inline-block;
     margin: 0;
     padding: 0;
-    font-style: bold;
+    font-weight: bold;
     text-transform: uppercase;
     font-family: monospace;
     margin-top: 2rem;
     text-align: right;
+    overflow: hidden;
 }
 
 
@@ -70,27 +72,35 @@ section#main{
     margin: 0;
     margin-top: 0.4rem;
     margin-left: 1rem;
-    display: block;
+    width: 40rem;
     float: left;
     line-height: 1.5;
     text-align: justify;
 }
 
 h1 {
-    font-size: 2rem;
+    font-size: 1.4em;
 }
 
 h2 {
-    font-size: 1.4rem;
+    font-size: 1.2em;
 }
 
+.date {
+    font-size: 0.8em;
+    color: grey;
+}
 
 
 /* Source code (use zenburn like color schreme) */
 
 pre, code {
-    font-family: monospace, monospace;
-    _font-family: 'courier new', monospace;
+    /* font-family: monospace, monospace;
+    _font-family: 'courier new', monospace; */
+    color: #dcdccc;
+    border-radius: 0.2rem;
+    background: #2f2f2f;
+    text-align: left;
 }
 
 a.sourceLine::before {
@@ -98,28 +108,26 @@ a.sourceLine::before {
   display: inline-block;
   color: grey;
 }
-code, pre { 
-    color: #f0efd0;
-    border-radius: 0.2rem;
-    background: #2f2f2f;
-    text-align: left;
-}
 pre {
-    padding: 1em;
+    padding: 1rem;
     white-space: pre-wrap;
     word-wrap: break-word;
-    line-height: 1.8;
-    border: solid 1em grey;
+    line-height: 1.4;
+    border: solid 0.1rem grey;
+    overflow: auto;
 }
 
 /* macro */
 .pp{ color: #dfaf8f; }
 /* keyword */
-.kw{ color: #f0dfaf; }
+.kw{ color: #f0dfaf; font-weight: normal; }
+.cf{ color: #f0dfaf; font-weight: bold; }
 /* string */
 .st{ color: #cc9393; }
 /* comment */
 .co{ color: #7f9f7f; }
 /* numbers */
 .dv{ color: #8cd0d3; }
+/* data type */
+.dt{ color: #dfdfbf; font-weight: bold; }
 
